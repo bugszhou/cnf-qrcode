@@ -10,6 +10,7 @@ Inside your project folder do:
 
 ```shell
 npm install --save cnf-qrcode
+```
 
 ## API
 
