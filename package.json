@@ -21,7 +21,10 @@
     },
     "dependencies": {
         "@babel/runtime": "^7.5.4",
-        "@babel/runtime-corejs2": "^7.5.4"
+        "@babel/runtime-corejs2": "^7.5.4",
+        "dijkstrajs": "^1.0.1",
+        "isarray": "^2.0.5",
+        "pngjs": "^3.4.0"
     },
     "devDependencies": {
         "@babel/core": "^7.5.4",
