@@ -1,5 +1,5 @@
 import isArray from 'isarray';
-import * as Buffer from '../utils/buffer';
+import Buffer from '../utils/buffer';
 import * as Utils from './utils';
 import * as ECLevel from './error-correction-level';
 import BitBuffer from './bit-buffer';

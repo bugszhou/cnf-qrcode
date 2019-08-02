@@ -8,7 +8,7 @@
  * and their number depends on the symbol version.
  */
 
-const { getSymbolSize } = require('./utils');
+import { getSymbolSize } from './utils';
 
 /**
  * Calculate the row/column coordinates of the center module of each alignment pattern
@@ -24,7 +24,7 @@ const { getSymbolSize } = require('./utils');
  * @param  {Number} version QR Code version
  * @return {Array}          Array of coordinate
  */
-exports.getRowColCoords = function getRowColCoords(version) {
+export function getRowColCoords(version) {
   if (version === 1) return [];
 
   const posCount = Math.floor(version / 7) + 2;
@@ -61,9 +61,9 @@ exports.getRowColCoords = function getRowColCoords(version) {
  * @param  {Number} version QR Code version
  * @return {Array}          Array of coordinates
  */
-exports.getPositions = function getPositions(version) {
+export function getPositions(version) {
   const coords = [];
-  const pos = exports.getRowColCoords(version);
+  const pos = getRowColCoords(version);
   const posLength = pos.length;
 
   for (let i = 0; i < posLength; i++) {

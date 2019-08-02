@@ -1,4 +1,4 @@
-import * as Buffer from '../utils/buffer';
+import Buffer from '../utils/buffer';
 import * as GF from './galois-field';
 
 /**

@@ -1,5 +1,5 @@
-const Buffer = require('../utils/buffer');
-const Mode = require('./mode');
+import Buffer from '../utils/buffer';
+import * as Mode from './mode';
 
 function ByteData(data) {
   this.mode = Mode.BYTE;
@@ -24,4 +24,4 @@ ByteData.prototype.write = function(bitBuffer) {
   }
 };
 
-module.exports = ByteData;
+export default ByteData;

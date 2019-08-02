@@ -1,4 +1,4 @@
-const ECLevel = require('./error-correction-level');
+import * as ECLevel from './error-correction-level';
 
 const EC_BLOCKS_TABLE = [
 // L  M  Q  H
@@ -96,7 +96,7 @@ const EC_CODEWORDS_TABLE = [
  * @param  {Number} errorCorrectionLevel Error correction level
  * @return {Number}                      Number of error correction blocks
  */
-exports.getBlocksCount = function getBlocksCount(version, errorCorrectionLevel) {
+export function getBlocksCount(version, errorCorrectionLevel) {
   switch (errorCorrectionLevel) {
   case ECLevel.L:
     return EC_BLOCKS_TABLE[(version - 1) * 4 + 0];
@@ -119,7 +119,7 @@ exports.getBlocksCount = function getBlocksCount(version, errorCorrectionLevel) 
  * @param  {Number} errorCorrectionLevel Error correction level
  * @return {Number}                      Number of error correction codewords
  */
-exports.getTotalCodewordsCount = function getTotalCodewordsCount(version, errorCorrectionLevel) {
+export function getTotalCodewordsCount(version, errorCorrectionLevel) {
   switch (errorCorrectionLevel) {
   case ECLevel.L:
     return EC_CODEWORDS_TABLE[(version - 1) * 4 + 0];

@@ -1,1 +1,3 @@
-module.exports = require('buffer').Buffer;
+import * as buffer from 'buffer';
+
+export default buffer.Buffer;

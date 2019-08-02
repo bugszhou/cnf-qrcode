@@ -1,9 +1,9 @@
 import dijkstra from 'dijkstrajs';
 import * as Mode from './mode';
 import NumericData from './numeric-data';
-import * as AlphanumericData from './alphanumeric-data';
-import * as ByteData from './byte-data';
-import * as KanjiData from './kanji-data';
+import AlphanumericData from './alphanumeric-data';
+import ByteData from './byte-data';
+import KanjiData from './kanji-data';
 import * as Regex from './regex';
 import * as Utils from './utils';
 

@@ -1,5 +1,5 @@
-const Mode = require('./mode');
-const Utils = require('./utils');
+import * as Utils from './utils';
+import * as Mode from './mode';
 
 function KanjiData(data) {
   this.mode = Mode.KANJI;
@@ -52,4 +52,4 @@ KanjiData.prototype.write = function(bitBuffer) {
   }
 };
 
-module.exports = KanjiData;
+export default KanjiData;

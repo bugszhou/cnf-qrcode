@@ -1,4 +1,4 @@
-const Buffer = require('../utils/buffer');
+import Buffer from '../utils/buffer';
 
 let EXP_TABLE;
 let LOG_TABLE;
@@ -48,7 +48,7 @@ if (Buffer.alloc) {
  * @param  {Number} n
  * @return {Number}
  */
-exports.log = function log(n) {
+export function log(n) {
   if (n < 1) throw new Error(`log(${n})`);
   return LOG_TABLE[n];
 };
@@ -59,7 +59,7 @@ exports.log = function log(n) {
  * @param  {Number} n
  * @return {Number}
  */
-exports.exp = function exp(n) {
+export function exp(n) {
   return EXP_TABLE[n];
 };
 
@@ -70,7 +70,7 @@ exports.exp = function exp(n) {
  * @param  {Number} y
  * @return {Number}
  */
-exports.mul = function mul(x, y) {
+export function mul(x, y) {
   if (x === 0 || y === 0) return 0;
 
   // should be EXP_TABLE[(LOG_TABLE[x] + LOG_TABLE[y]) % 255] if EXP_TABLE wasn't oversized

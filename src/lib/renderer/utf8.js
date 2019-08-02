@@ -1,4 +1,4 @@
-const Utils = require('./utils');
+import * as Utils from './utils';
 
 const BLOCK_CHAR = {
   WW: ' ',
@@ -21,7 +21,7 @@ function getBlockChar(top, bottom, blocks) {
   return blocks.WW;
 }
 
-exports.render = function(qrData, options, cb) {
+export function render(qrData, options, cb) {
   const opts = Utils.getOptions(options);
   let blocks = BLOCK_CHAR;
   if (opts.color.dark.hex === '#ffffff' || opts.color.light.hex === '#000000') {

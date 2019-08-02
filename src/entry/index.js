@@ -4,6 +4,7 @@ import {
   toBuffer,
   getSvgDataURL,
   toString,
+  getSvg,
 } from '../lib/index';
 
 export {
@@ -12,4 +13,5 @@ export {
   toBuffer,
   getSvgDataURL,
   toString,
+  getSvg
 };

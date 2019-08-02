@@ -1,4 +1,4 @@
-const Mode = require('./mode');
+import * as Mode from './mode';
 
 /**
  * Array of characters available in alphanumeric mode
@@ -56,4 +56,4 @@ AlphanumericData.prototype.write = function write(bitBuffer) {
   }
 };
 
-module.exports = AlphanumericData;
+export default AlphanumericData;
