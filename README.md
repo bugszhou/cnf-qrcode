@@ -17,9 +17,9 @@ npm install --save cnf-qrcode
 Browser&Server&小程序:
 - [toDataURL()](#todataurltext-options-cberror-url)
 - [toString()](#tostringtext-options-cberror-string)
-- [toBuffer()](#tobuffertext-options-cberror-string)
-- [getSvgDataURL()](#getsvgdataurltext-options-cberror-string)
-- [getSvg()](#getsvgtext-options-cberror-string)
+- [toBuffer()](#tobuffertext-options-cberror-buffer)
+- [getSvgDataURL()](#getsvgdataurltext-options-cberror-url)
+- [getSvg()](#getsvgtext-options-cberror-url)
 
 ### `toDataURL(text, [options], [cb(error, url)])`
 Returns a Data URI containing a representation of the QR Code image.<br>
@@ -112,7 +112,7 @@ In devtools
 
 ![Result](./docs/tostring.png)
 
-### `toBuffer(text, [options], [cb(error, string)])`
+### `toBuffer(text, [options], [cb(error, buffer)])`
 
 Returns a buffer representation of the QR Code.<br>
 
