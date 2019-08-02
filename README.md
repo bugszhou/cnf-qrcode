@@ -1,2 +1,4 @@
-# cnf-qrcode
-非标准DOM或者无DOM结构的应用，包括小程序生成qrcode，可生成svg，base64，buffer，utf8的二维码
+## cnf-qrcode
+----------------------------
+author: bugszhou | Email:bugszhou@outlook.com <br>
+description: generate qrcode,support svg base64 utf8
