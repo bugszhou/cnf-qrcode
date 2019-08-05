@@ -25,7 +25,7 @@ import { getSvgDataURL } from 'cnf-qrcode';
 or import all：
 
 ```javascript
-import * as qrcode from 'cnf-qrcode';
+import cnfQrcode from 'cnf-qrcode';
 ```
 
 ## API

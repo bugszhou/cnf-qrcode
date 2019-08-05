@@ -15,3 +15,12 @@ export {
   toString,
   getSvg
 };
+
+export default {
+  create,
+  toDataURL,
+  toBuffer,
+  getSvgDataURL,
+  toString,
+  getSvg
+};
