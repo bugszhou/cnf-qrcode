@@ -12,7 +12,7 @@ export default {
   output: [
     // umd模式，打包所有的依赖，可供浏览器直接使用
     {
-      name: 'cnf-qrcode',
+      name: 'cnfQrcode',
       file: 'dist/cnf-qrcode.dev.js',
       format: 'umd',
       sourcemap: true,
@@ -21,7 +21,7 @@ export default {
     },
     // umd模式，压缩后，打包所有的依赖，可供浏览器直接使用
     {
-      name: 'cnf-qrcode',
+      name: 'cnfQrcode',
       file: 'dist/cnf-qrcode.min.js',
       format: 'umd',
       sourcemap: true,
