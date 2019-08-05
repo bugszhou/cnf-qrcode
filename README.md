@@ -12,6 +12,22 @@ Inside your project folder do:
 npm install --save cnf-qrcode
 ```
 
+## Import
+
+import `getSvgDataURL`：<br>
+
+通过解构的方式，仅仅引入`getSvgDataURL`单个方法
+
+```javascript
+import { getSvgDataURL } from 'cnf-qrcode';
+```
+
+or import all：
+
+```javascript
+import * as qrcode from 'cnf-qrcode';
+```
+
 ## API
 
 Browser&Server&小程序:
