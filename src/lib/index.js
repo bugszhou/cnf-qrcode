@@ -97,9 +97,11 @@ export function toBuffer(text, opts, cb) {
 }
 
 export function getSvgDataURL(text, opts, cb) {
-  const params = checkParams(text, opts, (err, url) => {
-    cb(err, `data:image/svg+xml;utf8,${encodeURIComponent(url)}`);
-  });
+  const params = checkParams(text, opts, cb);
+  const outCallBack = params.cb;
+  params.cb = (err, url) => {
+    outCallBack(err, `data:image/svg+xml;utf8,${encodeURIComponent(url)}`);
+  };
   const renderer = getRendererFromType('svg');
   return render(renderer.render, text, params);
 }
