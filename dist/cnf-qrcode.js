@@ -2,10 +2,10 @@
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('isarray'), require('dijkstrajs'), require('pngjs')) :
   typeof define === 'function' && define.amd ? define(['exports', 'isarray', 'dijkstrajs', 'pngjs'], factory) :
   (global = global || self, (function () {
-    var current = global['cnf-qrcode'];
-    var exports = global['cnf-qrcode'] = {};
+    var current = global.cnfQrcode;
+    var exports = global.cnfQrcode = {};
     factory(exports, global.isArray$1, global.dijkstra, global.pngjs);
-    exports.noConflict = function () { global['cnf-qrcode'] = current; return exports; };
+    exports.noConflict = function () { global.cnfQrcode = current; return exports; };
   }()));
 }(this, function (exports, isArray$1, dijkstra, pngjs) { 'use strict';
 
@@ -3334,10 +3334,10 @@
 
   function checkParams(text,opts,cb){if("undefined"==typeof text)throw new Error("String required as first argument");if("undefined"==typeof cb&&(cb=opts,opts={}),"function"!=typeof cb)if(!canPromise())throw new Error("Callback required as last argument");else opts=cb||{},cb=null;return {opts:opts,cb:cb}}function getRendererFromType(type){switch(type){case"svg":return SvgRenderer;case"txt":case"utf8":return Utf8Renderer;case"png":case"image/png":default:return PngRenderer;}}function getStringRendererFromType(type){switch(type){case"svg":return SvgRenderer;case"utf8":default:return Utf8Renderer;}}function render$3(renderFunc,text,params){if(!params.cb)return new promise$1(function(resolve,reject){try{var data=create(text,params.opts);return renderFunc(data,params.opts,function(err,data){return err?reject(err):resolve(data)})}catch(e){reject(e);}});try{var data=create(text,params.opts);return renderFunc(data,params.opts,params.cb)}catch(e){params.cb(e);}}var create$1=create;function toString$3(text,opts,cb){var params=checkParams(text,opts,cb),renderer=getStringRendererFromType(params.opts.type);return render$3(renderer.render,text,params)}function toDataURL(text,opts,cb){var params=checkParams(text,opts,cb),renderer=getRendererFromType(params.opts.type);return render$3(renderer.renderToDataURL,text,params)}function toBuffer(text,opts,cb){var params=checkParams(text,opts,cb),renderer=getRendererFromType(params.opts.type);return render$3(renderer.renderToBuffer,text,params)}function getSvgDataURL(text,opts,cb){var params=checkParams(text,opts,function(err,url){cb(err,"data:image/svg+xml;utf8,".concat(encodeURIComponent(url)));}),renderer=getRendererFromType("svg");return render$3(renderer.render,text,params)}function getSvg(text,opts,cb){var params=checkParams(text,opts,cb),renderer=getRendererFromType("svg");return render$3(renderer.render,text,params)}
 
-  var index = {create:create$1,toDataURL:toDataURL,toBuffer:toBuffer,getSvgDataURL:getSvgDataURL,toString:toString$3,getSvg:getSvg};
+  var cnfQrocde={create:create$1,toDataURL:toDataURL,toBuffer:toBuffer,getSvgDataURL:getSvgDataURL,toString:toString$3,getSvg:getSvg};
 
   exports.create = create$1;
-  exports.default = index;
+  exports.default = cnfQrocde;
   exports.getSvg = getSvg;
   exports.getSvgDataURL = getSvgDataURL;
   exports.toBuffer = toBuffer;

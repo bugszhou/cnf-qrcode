@@ -7,6 +7,15 @@ import {
   getSvg,
 } from '../lib/index';
 
+const cnfQrocde = {
+  create,
+  toDataURL,
+  toBuffer,
+  getSvgDataURL,
+  toString,
+  getSvg
+};
+
 export {
   create,
   toDataURL,
@@ -16,11 +25,4 @@ export {
   getSvg
 };
 
-export default {
-  create,
-  toDataURL,
-  toBuffer,
-  getSvgDataURL,
-  toString,
-  getSvg
-};
+export default cnfQrocde;

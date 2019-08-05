@@ -14,6 +14,7 @@ export default {
     // umd，第三方依赖未打包
     {
       name: 'cnfQrcode',
+      exports: 'named',
       file: 'dist/cnf-qrcode.js',
       format: 'umd',
       sourcemap: true,
@@ -23,6 +24,7 @@ export default {
     // umd压缩后，第三方依赖未打包
     {
       name: 'cnfQrcode',
+      exports: 'named',
       file: 'dist/cnf-qrcode.common.js',
       format: 'umd',
       sourcemap: true,
@@ -31,6 +33,8 @@ export default {
     },
     // 使用es6 import语法
     {
+      name: 'cnfQrcode',
+      exports: 'named',
       file: 'dist/cnf-qrcode.esm.js',
       format: 'esm',
       sourcemap: true,
