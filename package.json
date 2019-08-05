@@ -1,6 +1,6 @@
 {
     "name": "cnf-qrcode",
-    "version": "1.0.9",
+    "version": "1.0.10",
     "description": "generate qrcode,support svg base64 utf8",
     "author": "bugszhou | Email:bugszhou@outlook.com",
     "main": "index.js",
