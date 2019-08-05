@@ -285,7 +285,7 @@ getSvg('text', opts, function (err, url) {
 #### `color.dark`
 Type: `String`<br>
 二维码条纹颜色(qrcode line color)<br>
-Default: `#000000ff`
+Default: `#000000`
 
 Color of dark module. Value must be in hex format (RGBA).<br>
 Note: dark color should always be darker than `color.light`.
@@ -293,7 +293,7 @@ Note: dark color should always be darker than `color.light`.
 #### `color.light`
 Type: `String`<br>
 二维码背景色(qrcode background)<br>
-Default: `#ffffffff`
+Default: `#ffffff`
 
 Color of light module. Value must be in hex format (RGBA).<br>
 
